@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>スマートフォン利用規約・同意書</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f4f6;
+    color: #222;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans JP",
+        "Yu Gothic",
+        sans-serif;
+}
+
+.header {
+    background: #17202a;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.header p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    opacity: .85;
+}
+
+.container {
+    width: min(850px, calc(100% - 24px));
+    margin: 25px auto 50px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 2px solid #17202a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.preface {
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.rule {
+    border: 1px solid #d5d8dc;
+    border-radius: 9px;
+    padding: 16px;
+    margin: 12px 0;
+    background: #fafafa;
+}
+
+.rule label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    line-height: 1.75;
+}
+
+.rule input {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.rule-number {
+    font-weight: bold;
+}
+
+.field {
+    margin: 20px 0;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    font-size: 16px;
+    background: white;
+}
+
+.signature-box {
+    width: 100%;
+    height: 230px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+}
+
+#signatureCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.signature-hint {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    color: #aaa;
+    font-size: 13px;
+    pointer-events: none;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.clear-button {
+    margin-top: 10px;
+    background: #e5e7e9;
+}
+
+.agree-button {
+    width: 100%;
+    background: #17202a;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.agree-button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#confirmation {
+    display: none;
+}
+
+.confirmation {
+    text-align: center;
+}
+
+.confirmation-number {
+    background: #f0f2f4;
+    border: 2px solid #17202a;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin: 18px 0;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.record {
+    border-top: 1px solid #ddd;
+    padding-top: 18px;
+    margin-top: 18px;
+    text-align: left;
+}
+
+.record-row {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.record-label {
+    width: 120px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.record-value {
+    flex: 1;
+    word-break: break-word;
+}
+
+.checked {
+    color: #176f3d;
+    font-weight: bold;
+}
+
+.final-button {
+    width: 100%;
+    background: #1f618d;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.message {
+    display: none;
+    padding: 13px;
+    border-radius: 7px;
+    margin-top: 15px;
+    background: #fadbd8;
+    color: #922b21;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 18px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .confirmation-number {
+        font-size: 24px;
+    }
+
+    .record-row {
+        display: block;
+    }
+
+    .record-label {
+        width: auto;
+        margin-bottom: 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>スマートフォン利用規約</h1>
+    <p>利用に関する確認・同意書</p>
+</div>
+
+
+<div class="container">
+
+
+<!-- ==========================================
+     規約
+========================================== -->
+
+<div class="card">
+
+    <div class="title">
+        スマートフォン利用規約
+    </div>
+
+    <div class="preface">
+        本規約は、貸し出されたスマートフォンの利用に関し、
+        利用者が遵守すべき事項を定めるものである。
+        利用者は、以下の各条項を確認し、その内容に同意したうえで
+        本スマートフォンを利用するものとする。
+    </div>
+
+    <div id="rules"></div>
+
+</div>
+
+
+<!-- ==========================================
+     利用者情報
+========================================== -->
+
+<div class="card">
+
+    <div class="title">
+        利用者情報
+    </div>
+
+    <div class="field">
+
+        <label for="name">
+            氏名
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="氏名を入力してください"
+            autocomplete="name"
+        >
+
+    </div>
+
+
+    <div class="field">
+
+        <label for="birth">
+            生年月日
+        </label>
+
+        <input
+            type="date"
+            id="birth"
+            autocomplete="bday"
+        >
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     署名
+========================================== -->
+
+<div class="card">
+
+    <div class="title">
+        署名
+    </div>
+
+    <p>
+        上記規約の内容を確認したことを示すため、
+        下欄に署名してください。
+    </p>
+
+
+    <div class="signature-box">
+
+        <canvas id="signatureCanvas"></canvas>
+
+        <div class="signature-hint">
+            ここに手書きで署名してください
+        </div>
+
+    </div>
+
+
+    <button
+        class="clear-button"
+        onclick="clearSignature()">
+
+        署名を消去
+
+    </button>
+
+</div>
+
+
+<!-- ==========================================
+     同意
+========================================== -->
+
+<div class="card">
+
+    <div class="title">
+        同意
+    </div>
+
+    <p>
+        すべての条項を確認し、内容に同意する場合は
+        以下のボタンを押してください。
+    </p>
+
+    <div
+        id="message"
+        class="message">
+    </div>
+
+    <button
+        id="agreeButton"
+        class="agree-button"
+        disabled
+        onclick="agree()">
+
+        以上の項目に同意する
+
+    </button>
+
+</div>
+
+
+<!-- ==========================================
+     確認記録
+========================================== -->
+
+<div
+    class="card"
+    id="confirmation">
+
+    <div class="title">
+        同意確認記録
+    </div>
+
+
+    <div class="confirmation">
+
+        <p>
+            以下の内容について確認・同意が完了しました。
+        </p>
+
+        <p>
+            <strong>確認番号</strong>
+        </p>
+
+        <div
+            class="confirmation-number"
+            id="confirmationNumber">
+        </div>
+
+        <p>
+            この画面をスクリーンショット等で
+            保存してください。
+        </p>
+
+    </div>
+
+
+    <div class="record">
+
+        <div class="record-row">
+
+            <div class="record-label">
+                氏名
+            </div>
+
+            <div
+                class="record-value"
+                id="resultName">
+            </div>
+
+        </div>
+
+
+        <div class="record-row">
+
+            <div class="record-label">
+                生年月日
+            </div>
+
+            <div
+                class="record-value"
+                id="resultBirth">
+            </div>
+
+        </div>
+
+
+        <div class="record-row">
+
+            <div class="record-label">
+                確認日時
+            </div>
+
+            <div
+                class="record-value"
+                id="resultDate">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <h3>
+        同意した規約
+    </h3>
+
+    <div id="resultRules"></div>
+
+
+    <h3>
+        署名
+    </h3>
+
+    <img
+        id="resultSignature"
+        alt="署名"
+        style="
+            width:100%;
+            max-height:230px;
+            object-fit:contain;
+            border:1px solid #ddd;
+            border-radius:8px;
+        "
+    >
+
+
+    <button
+        class="final-button"
+        onclick="startUse()">
+
+        以上を確認し利用を開始する
+
+    </button>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+    スマートフォン利用規約
+</div>
+
+
+<script>
+
+/* ==================================================
+   規約本文
+================================================== */
+
+const rules = [
+
+    {
+        title: "貸与物であることの認識",
+        text:
+        "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
+    },
+
+    {
+        title: "利用範囲の制限",
+        text:
+        "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
+    },
+
+    {
+        title: "貸し主からの指示",
+        text:
+        "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
+    },
+
+    {
+        title: "禁止行為",
+        text:
+        "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
+    },
+
+    {
+        title: "例外",
+        text:
+        "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
+    },
+
+    {
+        title: "貸し出しの停止等",
+        text:
+        "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
+    },
+
+    {
+        title: "規約違反時の措置",
+        text:
+        "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
+    }
+
+];
+
+
+/* ==================================================
+   規約表示
+================================================== */
+
+const rulesArea =
+    document.getElementById("rules");
+
+
+rules.forEach((rule, index) => {
+
+    const div =
+        document.createElement("div");
+
+    div.className = "rule";
+
+    div.innerHTML = `
+
+        <label>
+
+            <input
+                type="checkbox"
+                class="ruleCheck"
+                data-index="${index}"
+            >
+
+            <span>
+
+                <span class="rule-number">
+                    第${index + 1}条　
+                    ${rule.title}
+                </span>
+
+                <br>
+
+                ${rule.text}
+
+            </span>
+
+        </label>
+
+    `;
+
+    rulesArea.appendChild(div);
+
+});
+
+
+/* ==================================================
+   入力状態
+================================================== */
+
+const checkboxes =
+    document.querySelectorAll(".ruleCheck");
+
+
+checkboxes.forEach(box => {
+
+    box.addEventListener(
+        "change",
+        updateButton
+    );
+
+});
+
+
+document
+    .getElementById("name")
+    .addEventListener(
+        "input",
+        updateButton
+    );
+
+
+document
+    .getElementById("birth")
+    .addEventListener(
+        "change",
+        updateButton
+    );
+
+
+function updateButton() {
+
+    const allChecked =
+        [...checkboxes]
+        .every(box => box.checked);
+
+
+    const name =
+        document
+        .getElementById("name")
+        .value
+        .trim();
+
+
+    const birth =
+        document
+        .getElementById("birth")
+        .value;
+
+
+    document
+        .getElementById("agreeButton")
+        .disabled =
+        !(allChecked &&
+          name &&
+          birth &&
+          signed);
+
+}
+
+
+/* ==================================================
+   手書き署名
+================================================== */
+
+const canvas =
+    document.getElementById(
+        "signatureCanvas"
+    );
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let drawing = false;
+let signed = false;
+
+
+function setupCanvas() {
+
+    const rect =
+        canvas.getBoundingClientRect();
+
+    const ratio =
+        window.devicePixelRatio || 1;
+
+
+    canvas.width =
+        rect.width * ratio;
+
+    canvas.height =
+        rect.height * ratio;
+
+
+    ctx.setTransform(
+        ratio,
+        0,
+        0,
+        ratio,
+        0,
+        0
+    );
+
+
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+}
+
+
+setupCanvas();
+
+
+function getPosition(e) {
+
+    const rect =
+        canvas.getBoundingClientRect();
+
+
+    if (e.touches) {
+
+        return {
+            x:
+                e.touches[0].clientX -
+                rect.left,
+
+            y:
+                e.touches[0].clientY -
+                rect.top
+        };
+
+    }
+
+
+    return {
+
+        x:
+            e.clientX -
+            rect.left,
+
+        y:
+            e.clientY -
+            rect.top
+
+    };
+
+}
+
+
+function startDrawing(e) {
+
+    e.preventDefault();
+
+    drawing = true;
+    signed = true;
+
+
+    const p =
+        getPosition(e);
+
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        p.x,
+        p.y
+    );
+
+
+    updateButton();
+
+}
+
+
+function draw(e) {
+
+    if (!drawing) return;
+
+    e.preventDefault();
+
+
+    const p =
+        getPosition(e);
+
+
+    ctx.lineTo(
+        p.x,
+        p.y
+    );
+
+
+    ctx.stroke();
+
+}
+
+
+function stopDrawing() {
+
+    drawing = false;
+
+    ctx.closePath();
+
+}
+
+
+canvas.addEventListener(
+    "mousedown",
+    startDrawing
+);
+
+canvas.addEventListener(
+    "mousemove",
+    draw
+);
+
+canvas.addEventListener(
+    "mouseup",
+    stopDrawing
+);
+
+canvas.addEventListener(
+    "mouseleave",
+    stopDrawing
+);
+
+
+canvas.addEventListener(
+    "touchstart",
+    startDrawing,
+    {
+        passive: false
+    }
+);
+
+canvas.addEventListener(
+    "touchmove",
+    draw,
+    {
+        passive: false
+    }
+);
+
+canvas.addEventListener(
+    "touchend",
+    stopDrawing
+);
+
+
+function clearSignature() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    signed = false;
+
+    updateButton();
+
+}
+
+
+/* ==================================================
+   確認番号生成
+================================================== */
+
+function generateConfirmationNumber() {
+
+    const chars =
+        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+
+    let number = "SP-";
+
+
+    for (
+        let i = 0;
+        i < 8;
+        i++
+    ) {
+
+        number +=
+            chars[
+                Math.floor(
+                    Math.random() *
+                    chars.length
+                )
+            ];
+
+    }
+
+
+    return number;
+
+}
+
+
+/* ==================================================
+   同意ボタン
+================================================== */
+
+function agree() {
+
+    const name =
+        document
+        .getElementById("name")
+        .value
+        .trim();
+
+
+    const birth =
+        document
+        .getElementById("birth")
+        .value;
+
+
+    const allChecked =
+        [...checkboxes]
+        .every(box => box.checked);
+
+
+    if (
+        !name ||
+        !birth ||
+        !allChecked ||
+        !signed
+    ) {
+
+        showError(
+            "すべての規約を確認し、氏名・生年月日・署名を入力してください。"
+        );
+
+        return;
+
+    }
+
+
+    const number =
+        generateConfirmationNumber();
+
+
+    const now =
+        new Date();
+
+
+    const date =
+        now.toLocaleString(
+            "ja-JP",
+            {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit"
+            }
+        );
+
+
+    document
+        .getElementById(
+            "confirmationNumber"
+        )
+        .textContent =
+        number;
+
+
+    document
+        .getElementById(
+            "resultName"
+        )
+        .textContent =
+        name;
+
+
+    document
+        .getElementById(
+            "resultBirth"
+        )
+        .textContent =
+        formatBirth(birth);
+
+
+    document
+        .getElementById(
+            "resultDate"
+        )
+        .textContent =
+        date;
+
+
+    document
+        .getElementById(
+            "resultSignature"
+        )
+        .src =
+        canvas.toDataURL(
+            "image/png"
+        );
+
+
+    const resultRules =
+        document.getElementById(
+            "resultRules"
+        );
+
+
+    resultRules.innerHTML = "";
+
+
+    rules.forEach(
+        (rule, index) => {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "rule";
+
+
+            div.innerHTML = `
+
+                <div class="checked">
+                    ✓ 第${index + 1}条　
+                    ${escapeHTML(rule.title)}
+                </div>
+
+                <div style="margin-top:6px;">
+                    ${escapeHTML(rule.text)}
+                </div>
+
+            `;
+
+
+            resultRules.appendChild(div);
+
+        }
+    );
+
+
+    document
+        .getElementById(
+            "confirmation"
+        )
+        .style.display =
+        "block";
+
+
+    document
+        .getElementById(
+            "confirmation"
+        )
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* ==================================================
+   利用開始
+================================================== */
+
+function startUse() {
+
+    /*
+       ここでGoogleへ移動
+    */
+
+    window.location.href =
+        "https://www.google.com/";
+
+}
+
+
+/* ==================================================
+   生年月日表示
+================================================== */
+
+function formatBirth(value) {
+
+    const date =
+        new Date(
+            value + "T00:00:00"
+        );
+
+
+    return date.toLocaleDateString(
+        "ja-JP",
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
+
+}
+
+
+/* ==================================================
+   HTMLエスケープ
+================================================== */
+
+function escapeHTML(value) {
+
+    return String(value)
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
+
+}
+
+
+/* ==================================================
+   エラー表示
+================================================== */
+
+function showError(text) {
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+
+    message.textContent =
+        text;
+
+
+    message.style.display =
+        "block";
+
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
