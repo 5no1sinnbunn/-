@@ -2,20 +2,33 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta
+    name="viewport"
+    content="width=device-width,
+             initial-scale=1.0,
+             viewport-fit=cover">
 
 <title>スマートフォン利用規約</title>
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#17202a">
+<meta
+    name="apple-mobile-web-app-capable"
+    content="yes">
+
+<meta
+    name="mobile-web-app-capable"
+    content="yes">
+
+<meta
+    name="theme-color"
+    content="#17202a">
+
 
 <style>
 
-/* ==========================================
+/* =========================================
    基本
-========================================== */
+========================================= */
 
 * {
     box-sizing: border-box;
@@ -31,6 +44,7 @@ body {
 body {
     background: #eef0f3;
     color: #202124;
+
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -40,73 +54,46 @@ body {
 }
 
 
-/* ==========================================
+/* =========================================
    ヘッダー
-========================================== */
+========================================= */
 
 .header {
     background: #17202a;
     color: white;
 
-    padding:
-        calc(18px + env(safe-area-inset-top))
-        18px
-        18px;
-
     text-align: center;
+
+    padding:
+        calc(12px + env(safe-area-inset-top))
+        14px
+        12px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 25px;
+
+    font-size: 21px;
 }
 
 .header p {
-    margin: 7px 0 0;
-    font-size: 13px;
+    margin: 4px 0 0;
+
+    font-size: 11px;
+
     opacity: .8;
 }
 
 
-/* ==========================================
-   全画面ボタン
-========================================== */
-
-.fullscreen-button {
-    position: fixed;
-
-    right: 12px;
-    bottom: 12px;
-
-    z-index: 1000;
-
-    width: 48px;
-    height: 48px;
-
-    padding: 0;
-
-    border-radius: 50%;
-    border: none;
-
-    background: #17202a;
-    color: white;
-
-    font-size: 20px;
-
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.25);
-}
-
-
-/* ==========================================
+/* =========================================
    画面
-========================================== */
+========================================= */
 
 .screen {
     display: none;
 
     min-height:
-        calc(100vh - 100px);
+        calc(100vh - 80px);
 }
 
 .screen.active {
@@ -115,67 +102,58 @@ body {
 
 .container {
     width:
-        min(850px, calc(100% - 20px));
+        min(850px, calc(100% - 14px));
 
     margin:
-        20px auto 50px;
+        8px auto 30px;
 }
 
 
-/* ==========================================
+/* =========================================
    カード
-========================================== */
+========================================= */
 
 .card {
     background: white;
 
-    border-radius: 14px;
+    border-radius: 11px;
 
-    padding: 22px;
+    padding: 14px;
 
-    margin-bottom: 18px;
+    margin-bottom: 9px;
 
     box-shadow:
-        0 3px 14px rgba(0,0,0,.08);
+        0 2px 8px rgba(0,0,0,.07);
 }
 
 .title {
-    font-size: 21px;
+    font-size: 18px;
+
     font-weight: bold;
 
     border-bottom:
         2px solid #17202a;
 
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 
-/* ==========================================
-   前文
-========================================== */
-
-.preface {
-    line-height: 1.85;
-    margin-bottom: 20px;
-}
-
-
-/* ==========================================
-   赤字・太字
-========================================== */
+/* =========================================
+   重要表示
+========================================= */
 
 .important-notice {
     color: red;
 
     font-weight: bold;
 
-    font-size: 17px;
+    font-size: 15px;
 
-    line-height: 1.7;
+    line-height: 1.45;
 
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .expiry-notice {
@@ -183,27 +161,33 @@ body {
 
     font-weight: bold;
 
-    font-size: 17px;
+    font-size: 14px;
 
-    line-height: 1.7;
+    line-height: 1.4;
 
-    margin-bottom: 16px;
+    margin-bottom: 7px;
+}
+
+.preface {
+    font-size: 13px;
+
+    line-height: 1.55;
 }
 
 
-/* ==========================================
+/* =========================================
    規約
-========================================== */
+========================================= */
 
 .rule {
     border:
         1px solid #d5d8dc;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
-    padding: 15px;
+    padding: 9px;
 
-    margin: 12px 0;
+    margin: 7px 0;
 
     background: #fafafa;
 }
@@ -211,35 +195,41 @@ body {
 .rule label {
     display: flex;
 
-    gap: 12px;
+    gap: 9px;
 
     align-items: flex-start;
 
-    line-height: 1.7;
+    line-height: 1.45;
 
     cursor: pointer;
 }
 
 .rule input {
-    width: 22px;
-    height: 22px;
+    width: 21px;
+    height: 21px;
 
     flex-shrink: 0;
 
-    margin-top: 3px;
+    margin: 2px 0 0;
 }
 
 .rule-title {
     font-weight: bold;
+
+    font-size: 14px;
+}
+
+.rule-text {
+    font-size: 13px;
 }
 
 
-/* ==========================================
+/* =========================================
    入力欄
-========================================== */
+========================================= */
 
 .field {
-    margin: 20px 0;
+    margin: 9px 0;
 }
 
 .field label {
@@ -247,19 +237,21 @@ body {
 
     font-weight: bold;
 
-    margin-bottom: 7px;
+    font-size: 14px;
+
+    margin-bottom: 4px;
 }
 
 input[type="text"],
 input[type="date"] {
     width: 100%;
 
-    padding: 14px;
+    padding: 10px;
 
     border:
         1px solid #aaa;
 
-    border-radius: 8px;
+    border-radius: 7px;
 
     background: white;
 
@@ -267,22 +259,22 @@ input[type="date"] {
 }
 
 
-/* ==========================================
-   署名欄
-========================================== */
+/* =========================================
+   署名
+========================================= */
 
 .signature-box {
     width: 100%;
 
     height:
-        clamp(160px, 42vw, 300px);
+        clamp(120px, 28vw, 190px);
 
     position: relative;
 
     border:
         2px solid #333;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
     background: white;
 
@@ -308,45 +300,47 @@ input[type="date"] {
 .signature-hint {
     position: absolute;
 
-    left: 15px;
-    bottom: 10px;
+    left: 10px;
+    bottom: 7px;
 
     color: #aaa;
 
-    font-size: 13px;
+    font-size: 11px;
 
     pointer-events: none;
 }
 
 .clear-button {
-    margin-top: 10px;
+    margin-top: 6px;
+
+    padding: 8px 12px;
 
     background: #e5e7e9;
 
     color: #222;
+
+    font-size: 13px;
 }
 
 
-/* ==========================================
+/* =========================================
    ボタン
-========================================== */
+========================================= */
 
 button {
     border: none;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
-    padding: 14px 20px;
+    padding: 12px 16px;
 
-    font-size: 16px;
+    font-size: 15px;
 
     cursor: pointer;
 }
 
 .agree-button {
     width: 100%;
-
-    margin-top: 12px;
 
     background: #17202a;
 
@@ -361,6 +355,35 @@ button {
     cursor: not-allowed;
 }
 
+.start-button {
+    width: 100%;
+
+    background: #1f618d;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    padding: 13px;
+}
+
+.back-button {
+    width: 100%;
+
+    margin-top: 6px;
+
+    background: #e5e7e9;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   エラー
+========================================= */
+
 .error {
     display: none;
 
@@ -368,33 +391,58 @@ button {
 
     color: #922b21;
 
-    padding: 13px;
+    padding: 9px;
 
-    border-radius: 8px;
+    border-radius: 7px;
 
-    margin-top: 15px;
+    margin-bottom: 8px;
 
-    line-height: 1.6;
+    font-size: 13px;
+
+    line-height: 1.5;
 }
 
 
-/* ==========================================
+/* =========================================
    確認画面
-========================================== */
+========================================= */
+
+.confirmation-screen-container {
+    width:
+        min(700px, calc(100% - 14px));
+
+    margin:
+        7px auto;
+}
+
+.confirm-card {
+    background: white;
+
+    border-radius: 11px;
+
+    padding: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.07);
+}
+
+
+/* =========================================
+   確認タイトル
+========================================= */
 
 .confirmation-header {
     text-align: center;
 
-    padding:
-        10px 0 20px;
+    margin-bottom: 7px;
 }
 
 .checkmark {
-    width: 70px;
-    height: 70px;
+    width: 43px;
+    height: 43px;
 
     margin:
-        0 auto 15px;
+        0 auto 5px;
 
     border-radius: 50%;
 
@@ -408,7 +456,7 @@ button {
 
     justify-content: center;
 
-    font-size: 38px;
+    font-size: 25px;
 
     font-weight: bold;
 }
@@ -416,7 +464,26 @@ button {
 .confirmation-header h2 {
     margin: 0;
 
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.confirmation-header p {
+    margin: 3px 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   確認番号
+========================================= */
+
+.number-label {
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #666;
 }
 
 .confirmation-number {
@@ -425,172 +492,231 @@ button {
     background: #f1f3f4;
 
     border:
-        2px solid #17202a;
+        1px solid #17202a;
 
-    border-radius: 10px;
+    border-radius: 7px;
 
-    padding: 18px 10px;
+    padding: 6px;
 
-    margin: 15px 0;
+    margin: 3px 0 7px;
 
-    font-size: 27px;
+    font-size: 20px;
 
     font-weight: bold;
 
-    letter-spacing: 4px;
-
-    word-break: break-all;
-}
-
-.notice {
-    text-align: center;
-
-    background: #fff8e1;
-
-    border-radius: 8px;
-
-    padding: 12px;
-
-    line-height: 1.6;
-
-    font-size: 14px;
+    letter-spacing: 3px;
 }
 
 
-/* ==========================================
-   確認情報
-========================================== */
+/* =========================================
+   情報
+========================================= */
 
-.info-row {
-    display: flex;
+.info-grid {
+    display: grid;
 
-    border-bottom:
-        1px solid #eee;
+    grid-template-columns:
+        1fr 1fr;
 
-    padding: 12px 0;
+    gap: 5px;
 
-    line-height: 1.6;
+    margin-bottom: 7px;
+}
+
+.info-box {
+    background: #f7f8f9;
+
+    border-radius: 6px;
+
+    padding: 6px 8px;
+
+    min-width: 0;
 }
 
 .info-label {
-    width: 120px;
+    display: block;
 
-    flex-shrink: 0;
+    font-size: 10px;
 
-    font-weight: bold;
+    color: #777;
+
+    margin-bottom: 1px;
 }
 
 .info-value {
-    flex: 1;
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
 
     word-break: break-word;
 }
 
 .expiry-result {
-    color: red !important;
+    color: red;
+}
+
+
+/* =========================================
+   規約確認
+========================================= */
+
+.rules-confirmed {
+    background: #f7f8f9;
+
+    border-radius: 7px;
+
+    padding: 7px 9px;
+
+    margin-bottom: 7px;
+}
+
+.rules-confirmed-title {
+    font-size: 12px;
 
     font-weight: bold;
+
+    margin-bottom: 4px;
 }
 
+.rules-status {
+    display: grid;
 
-/* ==========================================
-   確認済み規約
-========================================== */
+    grid-template-columns:
+        repeat(2, 1fr);
 
-.confirmed-rule {
-    border:
-        1px solid #d5d8dc;
-
-    border-radius: 9px;
-
-    padding: 14px;
-
-    margin: 10px 0;
-
-    background: #fafafa;
-
-    line-height: 1.7;
+    gap: 3px;
 }
 
-.confirmed-rule-title {
+.rules-status-item {
+    font-size: 10px;
+
+    background: white;
+
+    border-radius: 4px;
+
+    padding: 3px 5px;
+}
+
+.rules-status-item span {
     color: #176f3d;
 
     font-weight: bold;
-
-    margin-bottom: 5px;
 }
 
 
-/* ==========================================
-   署名表示
-========================================== */
+/* =========================================
+   署名
+========================================= */
+
+.signature-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
+}
+
+.signature-section-title {
+    width: 45px;
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
 
 .signature-result {
     width: 100%;
 
-    max-height: 300px;
+    height: 65px;
 
     object-fit: contain;
 
     border:
         1px solid #ddd;
 
-    border-radius: 8px;
+    border-radius: 5px;
 
     background: white;
 }
 
 
-/* ==========================================
-   利用開始
-========================================== */
+/* =========================================
+   確認注意
+========================================= */
 
-.start-button {
-    width: 100%;
+.notice {
+    text-align: center;
 
-    margin-top: 20px;
+    background: #fff8e1;
 
-    background: #1f618d;
+    border-radius: 6px;
+
+    padding: 5px;
+
+    margin-bottom: 7px;
+
+    line-height: 1.35;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   全画面ボタン
+========================================= */
+
+.fullscreen-button {
+    position: fixed;
+
+    right: 9px;
+    bottom: 9px;
+
+    z-index: 1000;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: #17202a;
 
     color: white;
 
-    font-size: 17px;
+    font-size: 18px;
 
-    font-weight: bold;
-
-    padding: 17px;
-}
-
-.back-button {
-    width: 100%;
-
-    margin-top: 10px;
-
-    background: #e5e7e9;
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.25);
 }
 
 
-/* ==========================================
+/* =========================================
    フッター
-========================================== */
+========================================= */
 
 .footer {
     text-align: center;
 
     color: #777;
 
-    font-size: 12px;
+    font-size: 10px;
 
     padding:
-        15px
-        15px
-        calc(25px + env(safe-area-inset-bottom));
+        5px 5px
+        calc(10px + env(safe-area-inset-bottom));
 }
 
 
-/* ==========================================
+/* =========================================
    読み込み画面
-========================================== */
+========================================= */
 
 .loading-screen {
     position: fixed;
@@ -608,7 +734,7 @@ button {
 
     justify-content: center;
 
-    padding: 25px;
+    padding: 20px;
 }
 
 .loading-screen.active {
@@ -617,22 +743,22 @@ button {
 
 .loading-box {
     width:
-        min(420px, 100%);
+        min(400px, 100%);
 
     text-align: center;
 }
 
 
-/* ==========================================
-   くるくるアニメーション
-========================================== */
+/* =========================================
+   くるくる
+========================================= */
 
 .loading-spinner {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 
     margin:
-        0 auto 24px;
+        0 auto 18px;
 
     border:
         6px solid #e5e7e9;
@@ -643,7 +769,7 @@ button {
     border-radius: 50%;
 
     animation:
-        loadingSpin 0.8s linear infinite;
+        loadingSpin .8s linear infinite;
 }
 
 @keyframes loadingSpin {
@@ -658,47 +784,39 @@ button {
 
 }
 
-
-/* ==========================================
-   読み込み文字
-========================================== */
-
 .loading-title {
-    font-size: 22px;
+    font-size: 20px;
 
     font-weight: bold;
 
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .loading-message {
     color: #666;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    min-height: 22px;
+    min-height: 20px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 
-/* ==========================================
+/* =========================================
    プログレスバー
-========================================== */
+========================================= */
 
 .progress-container {
     width: 100%;
 
-    height: 16px;
+    height: 14px;
 
     background: #e5e7e9;
 
     border-radius: 999px;
 
     overflow: hidden;
-
-    box-shadow:
-        inset 0 1px 3px rgba(0,0,0,.12);
 }
 
 .progress-bar {
@@ -715,66 +833,89 @@ button {
 }
 
 .progress-percent {
-    margin-top: 10px;
+    margin-top: 7px;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: bold;
 }
 
 
-/* ==========================================
-   スマホ
-========================================== */
+/* =========================================
+   小さいスマホ
+========================================= */
 
-@media (max-width: 600px) {
+@media (max-height: 700px) {
+
+    .header {
+        padding:
+            calc(8px + env(safe-area-inset-top))
+            10px
+            8px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
 
     .container {
-        width:
-            calc(100% - 12px);
-
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .card {
-        padding: 17px;
+        padding: 10px;
 
-        border-radius: 11px;
+        margin-bottom: 6px;
     }
 
     .title {
-        font-size: 20px;
-    }
-
-    .confirmation-number {
-        font-size: 22px;
-    }
-
-    .info-row {
-        display: block;
-    }
-
-    .info-label {
-        width: auto;
-
-        margin-bottom: 3px;
-    }
-
-    .important-notice,
-    .expiry-notice {
         font-size: 16px;
+
+        padding-bottom: 4px;
+
+        margin-bottom: 6px;
     }
 
-    .loading-title {
-        font-size: 20px;
+    .rule {
+        padding: 6px;
+
+        margin: 4px 0;
+    }
+
+    .rule-title {
+        font-size: 12px;
+    }
+
+    .rule-text {
+        font-size: 11px;
+    }
+
+    .preface {
+        font-size: 11px;
+    }
+
+    .important-notice {
+        font-size: 13px;
+    }
+
+    .expiry-notice {
+        font-size: 12px;
+    }
+
+    .field {
+        margin: 5px 0;
+    }
+
+    .signature-box {
+        height: 100px;
     }
 
 }
 
 
-/* ==========================================
-   全画面
-========================================== */
+/* =========================================
+   全画面時
+========================================= */
 
 :fullscreen {
     background: #eef0f3;
@@ -791,9 +932,9 @@ button {
 <body>
 
 
-<!-- ==========================================
+<!-- =======================================
      ヘッダー
-========================================== -->
+======================================= -->
 
 <header class="header">
 
@@ -808,9 +949,9 @@ button {
 </header>
 
 
-<!-- ==========================================
+<!-- =======================================
      入力画面
-========================================== -->
+======================================= -->
 
 <div
     id="inputScreen"
@@ -818,6 +959,8 @@ button {
 
 <div class="container">
 
+
+<!-- 規約 -->
 
 <div class="card">
 
@@ -829,17 +972,18 @@ button {
     <div class="preface">
 
         <div class="important-notice">
-
             本規約に同意いただけない場合、
             スマートフォンを利用することができません。
-
         </div>
 
 
         <div
             id="inputExpiryNotice"
-            class="expiry-notice"
-            style="display:none;">
+            class="expiry-notice">
+
+            本規約の有効期限：
+            同意日から1ヶ月
+
         </div>
 
 
@@ -856,9 +1000,7 @@ button {
 </div>
 
 
-<!-- ==========================================
-     利用者情報
-========================================== -->
+<!-- 利用者情報 -->
 
 <div class="card">
 
@@ -876,8 +1018,7 @@ button {
         <input
             id="name"
             type="text"
-            placeholder="氏名を入力してください"
-            autocomplete="name">
+            placeholder="氏名を入力">
 
     </div>
 
@@ -890,17 +1031,14 @@ button {
 
         <input
             id="birth"
-            type="date"
-            autocomplete="bday">
+            type="date">
 
     </div>
 
 </div>
 
 
-<!-- ==========================================
-     署名
-========================================== -->
+<!-- 署名 -->
 
 <div class="card">
 
@@ -909,24 +1047,12 @@ button {
     </div>
 
 
-    <p>
-
-        上記規約の内容を確認したことを示すため、
-        下欄に手書きで署名してください。
-
-    </p>
-
-
     <div class="signature-box">
 
-        <canvas
-            id="signatureCanvas">
-        </canvas>
+        <canvas id="signatureCanvas"></canvas>
 
         <div class="signature-hint">
-
-            ここに署名してください
-
+            ここに手書きで署名してください
         </div>
 
     </div>
@@ -943,24 +1069,13 @@ button {
 </div>
 
 
-<!-- ==========================================
-     同意
-========================================== -->
+<!-- 同意 -->
 
 <div class="card">
 
     <div class="title">
         同意
     </div>
-
-
-    <p>
-
-        すべての条項を確認し、
-        内容に同意する場合は
-        以下のボタンを押してください。
-
-    </p>
 
 
     <div
@@ -986,238 +1101,193 @@ button {
 </div>
 
 
-<!-- ==========================================
+<!-- =======================================
      確認画面
-========================================== -->
+======================================= -->
 
 <div
     id="confirmationScreen"
     class="screen">
 
-<div class="container">
+<div class="confirmation-screen-container">
+
+<div class="confirm-card">
 
 
-<div class="card">
+<!-- タイトル -->
 
-    <div class="confirmation-header">
+<div class="confirmation-header">
 
-        <div class="checkmark">
-            ✓
-        </div>
+    <div class="checkmark">
+        ✓
+    </div>
+
+    <h2>
+        同意確認完了
+    </h2>
+
+    <p>
+        以下の内容を確認してください
+    </p>
+
+</div>
 
 
-        <h2>
-            同意確認完了
-        </h2>
+<!-- 確認番号 -->
+
+<div class="number-label">
+    確認番号
+</div>
+
+<div
+    id="confirmationNumber"
+    class="confirmation-number">
+</div>
 
 
-        <p>
-            以下の内容を確認してください。
-        </p>
+<!-- 利用者情報 -->
+
+<div class="info-grid">
+
+
+    <div class="info-box">
+
+        <span class="info-label">
+            氏名
+        </span>
+
+        <span
+            id="resultName"
+            class="info-value">
+        </span>
 
     </div>
 
 
-    <p style="text-align:center;">
+    <div class="info-box">
 
-        <strong>
-            確認番号
-        </strong>
+        <span class="info-label">
+            生年月日
+        </span>
 
-    </p>
+        <span
+            id="resultBirth"
+            class="info-value">
+        </span>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <span class="info-label">
+            同意日
+        </span>
+
+        <span
+            id="resultAgreementDate"
+            class="info-value">
+        </span>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <span class="info-label">
+            有効期限
+        </span>
+
+        <span
+            id="resultExpiryDate"
+            class="info-value expiry-result">
+        </span>
+
+    </div>
+
+
+</div>
+
+
+<!-- 規約確認 -->
+
+<div class="rules-confirmed">
+
+    <div class="rules-confirmed-title">
+
+        規約確認状況
+
+    </div>
 
 
     <div
-        id="confirmationNumber"
-        class="confirmation-number">
-    </div>
-
-
-    <div class="notice">
-
-        この確認番号と以下の内容は
-        この画面を閉じると再表示できません。
-        必要に応じてスクリーンショットを
-        保存してください。
-
+        id="rulesStatus"
+        class="rules-status">
     </div>
 
 </div>
 
 
-<!-- ==========================================
-     利用者情報
-========================================== -->
+<!-- 署名 -->
 
-<div class="card">
+<div class="signature-section">
 
-    <div class="title">
-        利用者情報
-    </div>
-
-
-    <div class="info-row">
-
-        <div class="info-label">
-            氏名
-        </div>
-
-        <div
-            id="resultName"
-            class="info-value">
-        </div>
-
-    </div>
-
-
-    <div class="info-row">
-
-        <div class="info-label">
-            生年月日
-        </div>
-
-        <div
-            id="resultBirth"
-            class="info-value">
-        </div>
-
-    </div>
-
-
-    <div class="info-row">
-
-        <div class="info-label">
-            同意日
-        </div>
-
-        <div
-            id="resultAgreementDate"
-            class="info-value">
-        </div>
-
-    </div>
-
-
-    <div class="info-row">
-
-        <div class="info-label">
-            有効期限
-        </div>
-
-        <div
-            id="resultExpiryDate"
-            class="info-value expiry-result">
-        </div>
-
-    </div>
-
-
-    <div class="info-row">
-
-        <div class="info-label">
-            確認日時
-        </div>
-
-        <div
-            id="resultDate"
-            class="info-value">
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ==========================================
-     規約
-========================================== -->
-
-<div class="card">
-
-    <div class="title">
-        同意した規約
-    </div>
-
-
-    <div id="resultRules"></div>
-
-</div>
-
-
-<!-- ==========================================
-     署名
-========================================== -->
-
-<div class="card">
-
-    <div class="title">
+    <div class="signature-section-title">
         署名
     </div>
-
 
     <img
         id="resultSignature"
         class="signature-result"
-        alt="登録された署名">
+        alt="署名">
 
 </div>
 
 
-<!-- ==========================================
-     利用開始
-========================================== -->
+<!-- 注意 -->
 
-<div class="card">
+<div class="notice">
 
-    <div class="title">
-        利用開始
-    </div>
-
-
-    <p style="line-height:1.8;">
-
-        上記の確認内容に誤りがないことを確認し、
-        本スマートフォンの利用を開始する場合は、
-        以下のボタンを押してください。
-
-    </p>
-
-
-    <button
-        class="start-button"
-        onclick="startUse()">
-
-        以上を確認し利用を開始する
-
-    </button>
-
-
-    <button
-        class="back-button"
-        onclick="backToInput()">
-
-        内容を修正する
-
-    </button>
+    上記の内容および各規約を確認し、
+    内容に誤りがないことを確認してください。
 
 </div>
 
 
+<!-- 利用開始 -->
+
+<button
+    class="start-button"
+    onclick="startUse()">
+
+    以上を確認し利用を開始する
+
+</button>
+
+
+<button
+    class="back-button"
+    onclick="backToInput()">
+
+    内容を修正する
+
+</button>
+
+
+</div>
 </div>
 </div>
 
 
-<!-- ==========================================
+<!-- =======================================
      読み込み画面
-========================================== -->
+======================================= -->
 
 <div
     id="loadingScreen"
     class="loading-screen">
 
     <div class="loading-box">
-
-        <!-- くるくるアニメーション -->
 
         <div class="loading-spinner"></div>
 
@@ -1259,9 +1329,9 @@ button {
 </div>
 
 
-<!-- ==========================================
-     全画面ボタン
-========================================== -->
+<!-- =======================================
+     全画面
+======================================= -->
 
 <button
     class="fullscreen-button"
@@ -1274,18 +1344,16 @@ button {
 
 
 <footer class="footer">
-
     スマートフォン利用規約
-
 </footer>
 
 
 <script>
 
 
-/* ==========================================
-   規約本文
-========================================== */
+/* =========================================
+   規約
+========================================= */
 
 const rules = [
 
@@ -1354,9 +1422,9 @@ const rules = [
 ];
 
 
-/* ==========================================
-   規約を表示
-========================================== */
+/* =========================================
+   規約表示
+========================================= */
 
 const rulesArea =
     document.getElementById("rules");
@@ -1368,10 +1436,7 @@ rules.forEach(
         const div =
             document.createElement("div");
 
-
-        div.className =
-            "rule";
-
+        div.className = "rule";
 
         div.innerHTML = `
 
@@ -1392,7 +1457,11 @@ rules.forEach(
 
                     <br>
 
-                    ${escapeHTML(rule.text)}
+                    <span class="rule-text">
+
+                        ${escapeHTML(rule.text)}
+
+                    </span>
 
                 </span>
 
@@ -1400,16 +1469,15 @@ rules.forEach(
 
         `;
 
-
         rulesArea.appendChild(div);
 
     }
 );
 
 
-/* ==========================================
+/* =========================================
    署名キャンバス
-========================================== */
+========================================= */
 
 const canvas =
     document.getElementById(
@@ -1425,10 +1493,6 @@ let drawing = false;
 let signed = false;
 
 
-/* ==========================================
-   Canvasサイズ
-========================================== */
-
 function resizeCanvas() {
 
     const rect =
@@ -1442,32 +1506,10 @@ function resizeCanvas() {
         );
 
 
-    let oldImage = null;
-
-
-    if (
-        canvas.width > 0 &&
-        canvas.height > 0 &&
-        signed
-    ) {
-
-        try {
-
-            oldImage =
-                canvas.toDataURL(
-                    "image/png"
-                );
-
-        } catch (e) {}
-
-    }
-
-
     canvas.width =
         Math.round(
             rect.width * ratio
         );
-
 
     canvas.height =
         Math.round(
@@ -1491,35 +1533,6 @@ function resizeCanvas() {
 
     ctx.lineJoin = "round";
 
-
-    if (
-        oldImage &&
-        signed
-    ) {
-
-        const image =
-            new Image();
-
-
-        image.onload =
-            function() {
-
-                ctx.drawImage(
-                    image,
-                    0,
-                    0,
-                    rect.width,
-                    rect.height
-                );
-
-            };
-
-
-        image.src =
-            oldImage;
-
-    }
-
 }
 
 
@@ -1532,9 +1545,9 @@ window.addEventListener(
 );
 
 
-/* ==========================================
-   座標取得
-========================================== */
+/* =========================================
+   署名位置
+========================================= */
 
 function getPosition(e) {
 
@@ -1574,9 +1587,9 @@ function getPosition(e) {
 }
 
 
-/* ==========================================
-   描画開始
-========================================== */
+/* =========================================
+   署名開始
+========================================= */
 
 function startDrawing(e) {
 
@@ -1593,7 +1606,6 @@ function startDrawing(e) {
 
     ctx.beginPath();
 
-
     ctx.moveTo(
         p.x,
         p.y
@@ -1605,14 +1617,13 @@ function startDrawing(e) {
 }
 
 
-/* ==========================================
-   描画
-========================================== */
+/* =========================================
+   署名描画
+========================================= */
 
 function draw(e) {
 
     if (!drawing) return;
-
 
     e.preventDefault();
 
@@ -1626,15 +1637,14 @@ function draw(e) {
         p.y
     );
 
-
     ctx.stroke();
 
 }
 
 
-/* ==========================================
-   描画終了
-========================================== */
+/* =========================================
+   署名終了
+========================================= */
 
 function stopDrawing() {
 
@@ -1665,6 +1675,7 @@ canvas.addEventListener(
     stopDrawing
 );
 
+
 canvas.addEventListener(
     "touchstart",
     startDrawing,
@@ -1687,9 +1698,9 @@ canvas.addEventListener(
 );
 
 
-/* ==========================================
+/* =========================================
    署名消去
-========================================== */
+========================================= */
 
 function clearSignature() {
 
@@ -1700,18 +1711,16 @@ function clearSignature() {
         canvas.height
     );
 
-
     signed = false;
-
 
     updateButton();
 
 }
 
 
-/* ==========================================
-   入力確認
-========================================== */
+/* =========================================
+   入力チェック
+========================================= */
 
 const checkboxes =
     document.querySelectorAll(
@@ -1783,9 +1792,9 @@ function updateButton() {
 }
 
 
-/* ==========================================
+/* =========================================
    日付
-========================================== */
+========================================= */
 
 function formatDateJP(date) {
 
@@ -1799,9 +1808,9 @@ function formatDateJP(date) {
 }
 
 
-/* ==========================================
-   1か月後
-========================================== */
+/* =========================================
+   1ヶ月後
+========================================= */
 
 function addOneMonth(date) {
 
@@ -1832,9 +1841,9 @@ function addOneMonth(date) {
 }
 
 
-/* ==========================================
+/* =========================================
    確認番号
-========================================== */
+========================================= */
 
 function generateNumber() {
 
@@ -1868,50 +1877,54 @@ function generateNumber() {
 }
 
 
-/* ==========================================
-   ランダム読み込み
-========================================== */
+/* =========================================
+   読み込み
+========================================= */
 
 function showLoading(
-    loadingCallback,
-    minTime = 1800,
-    maxTime = 4200
+    callback,
+    minTime,
+    maxTime
 ) {
 
-    const loadingScreen =
+    const screen =
         document.getElementById(
             "loadingScreen"
         );
 
 
-    const progressBar =
+    const bar =
         document.getElementById(
             "progressBar"
         );
 
 
-    const progressPercent =
+    const percent =
         document.getElementById(
             "progressPercent"
         );
 
 
-    const loadingMessage =
+    const message =
         document.getElementById(
             "loadingMessage"
         );
 
 
-    /* ランダムな読み込み時間 */
-
     const duration =
         Math.floor(
             Math.random() *
-            (maxTime - minTime + 1)
-        ) + minTime;
+            (
+                maxTime -
+                minTime +
+                1
+            )
+        )
+        +
+        minTime;
 
 
-    const startTime =
+    const start =
         Date.now();
 
 
@@ -1920,24 +1933,18 @@ function showLoading(
     let finished = false;
 
 
-    loadingScreen.classList.add(
+    screen.classList.add(
         "active"
     );
 
 
-    progressBar.style.width =
+    bar.style.width =
         "0%";
 
 
-    progressPercent.textContent =
+    percent.textContent =
         "0%";
 
-
-    loadingMessage.textContent =
-        "内容を確認しています…";
-
-
-    /* ランダムメッセージ */
 
     const messages = [
 
@@ -1947,9 +1954,9 @@ function showLoading(
 
         "署名を確認しています…",
 
-        "利用情報を処理しています…",
+        "利用情報を確認しています…",
 
-        "確認情報を準備しています…",
+        "確認画面を準備しています…",
 
         "もう少しお待ちください…"
 
@@ -1966,43 +1973,41 @@ function showLoading(
                 messageIndex =
                     (
                         messageIndex + 1
-                    ) %
+                    )
+                    %
                     messages.length;
 
 
-                loadingMessage.textContent =
+                message.textContent =
                     messages[
                         messageIndex
                     ];
 
             },
+
             500 +
             Math.random() * 700
         );
 
 
-    /* 進捗更新 */
-
-    function updateProgress() {
+    function update() {
 
         if (finished) return;
 
 
         const elapsed =
-            Date.now() -
-            startTime;
+            Date.now() - start;
 
 
-        const timeRatio =
-            elapsed /
-            duration;
+        const ratio =
+            elapsed / duration;
 
 
         const target =
             Math.min(
                 99,
                 Math.floor(
-                    timeRatio * 100
+                    ratio * 100
                 )
             );
 
@@ -2011,26 +2016,23 @@ function showLoading(
             progress < target
         ) {
 
-            const step =
-                Math.floor(
-                    Math.random() * 8
-                ) + 1;
-
-
             progress =
                 Math.min(
                     target,
-                    progress + step
+                    progress +
+                    Math.floor(
+                        Math.random() * 6
+                    ) + 1
                 );
 
         }
 
 
-        progressBar.style.width =
+        bar.style.width =
             progress + "%";
 
 
-        progressPercent.textContent =
+        percent.textContent =
             progress + "%";
 
 
@@ -2038,29 +2040,23 @@ function showLoading(
             elapsed >= duration
         ) {
 
-            finishLoading();
+            finish();
 
             return;
 
         }
 
 
-        const nextDelay =
-            80 +
-            Math.random() * 220;
-
-
         setTimeout(
-            updateProgress,
-            nextDelay
+            update,
+            80 +
+            Math.random() * 220
         );
 
     }
 
 
-    /* 完了 */
-
-    function finishLoading() {
+    function finish() {
 
         if (finished) return;
 
@@ -2073,30 +2069,27 @@ function showLoading(
         );
 
 
-        progress = 100;
-
-
-        progressBar.style.width =
+        bar.style.width =
             "100%";
 
 
-        progressPercent.textContent =
+        percent.textContent =
             "100%";
 
 
-        loadingMessage.textContent =
+        message.textContent =
             "完了しました";
 
 
         setTimeout(
             function() {
 
-                loadingScreen.classList.remove(
+                screen.classList.remove(
                     "active"
                 );
 
 
-                loadingCallback();
+                callback();
 
             },
             350
@@ -2105,14 +2098,14 @@ function showLoading(
     }
 
 
-    updateProgress();
+    update();
 
 }
 
 
-/* ==========================================
-   同意ボタン
-========================================== */
+/* =========================================
+   同意
+========================================= */
 
 function agree() {
 
@@ -2153,19 +2146,17 @@ function agree() {
     }
 
 
-    /* 同意日時 */
+    /* 同意日 */
 
-    const agreementDateTime =
+    const now =
         new Date();
 
 
-    /* 同意日 */
-
     const agreementDate =
         new Date(
-            agreementDateTime.getFullYear(),
-            agreementDateTime.getMonth(),
-            agreementDateTime.getDate()
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate()
         );
 
 
@@ -2183,43 +2174,7 @@ function agree() {
         generateNumber();
 
 
-    /* 確認日時 */
-
-    const confirmationDate =
-        agreementDateTime.toLocaleString(
-            "ja-JP",
-            {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit"
-            }
-        );
-
-
-    /* 入力画面の有効期限 */
-
-    const inputExpiryNotice =
-        document.getElementById(
-            "inputExpiryNotice"
-        );
-
-
-    inputExpiryNotice.textContent =
-        "本規約の有効期限："
-        +
-        formatDateJP(
-            expiryDate
-        );
-
-
-    inputExpiryNotice.style.display =
-        "block";
-
-
-    /* 確認番号 */
+    /* 確認画面 */
 
     document
         .getElementById(
@@ -2229,8 +2184,6 @@ function agree() {
         number;
 
 
-    /* 氏名 */
-
     document
         .getElementById(
             "resultName"
@@ -2239,8 +2192,6 @@ function agree() {
         name;
 
 
-    /* 生年月日 */
-
     document
         .getElementById(
             "resultBirth"
@@ -2248,8 +2199,6 @@ function agree() {
         .textContent =
         formatBirth(birth);
 
-
-    /* 同意日 */
 
     document
         .getElementById(
@@ -2261,8 +2210,6 @@ function agree() {
         );
 
 
-    /* 有効期限 */
-
     document
         .getElementById(
             "resultExpiryDate"
@@ -2271,16 +2218,6 @@ function agree() {
         formatDateJP(
             expiryDate
         );
-
-
-    /* 確認日時 */
-
-    document
-        .getElementById(
-            "resultDate"
-        )
-        .textContent =
-        confirmationDate;
 
 
     /* 署名 */
@@ -2295,61 +2232,50 @@ function agree() {
         );
 
 
-    /* 規約 */
+    /* 規約確認状況 */
 
-    const resultRules =
+    const status =
         document.getElementById(
-            "resultRules"
+            "rulesStatus"
         );
 
 
-    resultRules.innerHTML =
+    status.innerHTML =
         "";
 
 
     rules.forEach(
         (rule, index) => {
 
-            const div =
+            const item =
                 document.createElement(
                     "div"
                 );
 
 
-            div.className =
-                "confirmed-rule";
+            item.className =
+                "rules-status-item";
 
 
-            div.innerHTML = `
+            item.innerHTML = `
 
-                <div
-                    class="confirmed-rule-title">
+                <span>✓</span>
 
-                    ✓ 第${index + 1}条　
-                    ${escapeHTML(rule.title)}
-
-                </div>
-
-                <div>
-
-                    ${escapeHTML(rule.text)}
-
-                </div>
+                第${index + 1}条
+                ${escapeHTML(rule.title)}
 
             `;
 
 
-            resultRules.appendChild(
-                div
+            status.appendChild(
+                item
             );
 
         }
     );
 
 
-    /* ======================================
-       1回目の読み込み
-    ====================================== */
+    /* 1回目の読み込み */
 
     showLoading(
 
@@ -2371,10 +2297,10 @@ function agree() {
                 .add("active");
 
 
-            window.scrollTo({
-                top: 0,
-                behavior: "instant"
-            });
+            window.scrollTo(
+                0,
+                0
+            );
 
         },
 
@@ -2387,9 +2313,9 @@ function agree() {
 }
 
 
-/* ==========================================
-   内容を修正
-========================================== */
+/* =========================================
+   修正
+========================================= */
 
 function backToInput() {
 
@@ -2409,23 +2335,21 @@ function backToInput() {
         .add("active");
 
 
-    window.scrollTo({
-        top: 0,
-        behavior: "instant"
-    });
+    window.scrollTo(
+        0,
+        0
+    );
 
 }
 
 
-/* ==========================================
+/* =========================================
    利用開始
-========================================== */
+========================================= */
 
 function startUse() {
 
-    /* ======================================
-       2回目の読み込み
-    ====================================== */
+    /* 2回目の読み込み */
 
     showLoading(
 
@@ -2445,15 +2369,16 @@ function startUse() {
 }
 
 
-/* ==========================================
-   生年月日表示
-========================================== */
+/* =========================================
+   生年月日
+========================================= */
 
 function formatBirth(value) {
 
     const date =
         new Date(
-            value + "T00:00:00"
+            value +
+            "T00:00:00"
         );
 
 
@@ -2469,9 +2394,9 @@ function formatBirth(value) {
 }
 
 
-/* ==========================================
-   エラー表示
-========================================== */
+/* =========================================
+   エラー
+========================================= */
 
 function showError(text) {
 
@@ -2497,9 +2422,9 @@ function showError(text) {
 }
 
 
-/* ==========================================
+/* =========================================
    HTMLエスケープ
-========================================== */
+========================================= */
 
 function escapeHTML(value) {
 
@@ -2533,9 +2458,9 @@ function escapeHTML(value) {
 }
 
 
-/* ==========================================
-   全画面表示
-========================================== */
+/* =========================================
+   全画面
+========================================= */
 
 async function toggleFullscreen() {
 
@@ -2565,7 +2490,7 @@ async function toggleFullscreen() {
     catch (error) {
 
         alert(
-            "このブラウザでは全画面表示が利用できません。"
+            "このブラウザでは全画面表示を利用できません。"
         );
 
     }
