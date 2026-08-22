@@ -6,6 +6,12 @@
 
 <title>スマートフォン利用規約</title>
 
+<!-- ホーム画面から起動したときにアプリのように表示 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#17202a">
+
 <style>
 * {
     box-sizing: border-box;
@@ -36,10 +42,12 @@ body {
 .header {
     background: #17202a;
     color: white;
+
     padding:
         calc(18px + env(safe-area-inset-top))
         18px
         18px;
+
     text-align: center;
 }
 
@@ -60,8 +68,10 @@ body {
 
 .fullscreen-button {
     position: fixed;
+
     right: 12px;
     bottom: 12px;
+
     z-index: 1000;
 
     width: 48px;
@@ -77,7 +87,8 @@ body {
 
     font-size: 20px;
 
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.25);
 }
 
 /* =========================
@@ -86,7 +97,9 @@ body {
 
 .screen {
     display: none;
-    min-height: calc(100vh - 100px);
+
+    min-height:
+        calc(100vh - 100px);
 }
 
 .screen.active {
@@ -94,8 +107,11 @@ body {
 }
 
 .container {
-    width: min(850px, calc(100% - 20px));
-    margin: 20px auto 50px;
+    width:
+        min(850px, calc(100% - 20px));
+
+    margin:
+        20px auto 50px;
 }
 
 /* =========================
@@ -104,8 +120,11 @@ body {
 
 .card {
     background: white;
+
     border-radius: 14px;
+
     padding: 22px;
+
     margin-bottom: 18px;
 
     box-shadow:
@@ -116,9 +135,11 @@ body {
     font-size: 21px;
     font-weight: bold;
 
-    border-bottom: 2px solid #17202a;
+    border-bottom:
+        2px solid #17202a;
 
     padding-bottom: 10px;
+
     margin-bottom: 18px;
 }
 
@@ -128,14 +149,33 @@ body {
 }
 
 /* =========================
+   重要注意書き
+========================= */
+
+.important-notice {
+    color: #c00000;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+}
+
+/* =========================
    規約
 ========================= */
 
 .rule {
-    border: 1px solid #d5d8dc;
+    border:
+        1px solid #d5d8dc;
+
     border-radius: 10px;
 
     padding: 15px;
+
     margin: 12px 0;
 
     background: #fafafa;
@@ -143,7 +183,9 @@ body {
 
 .rule label {
     display: flex;
+
     gap: 12px;
+
     align-items: flex-start;
 
     line-height: 1.7;
@@ -186,7 +228,9 @@ input[type="date"] {
 
     padding: 14px;
 
-    border: 1px solid #aaa;
+    border:
+        1px solid #aaa;
+
     border-radius: 8px;
 
     background: white;
@@ -200,11 +244,14 @@ input[type="date"] {
 
 .signature-box {
     width: 100%;
+
     height: 230px;
 
     position: relative;
 
-    border: 2px solid #333;
+    border:
+        2px solid #333;
+
     border-radius: 9px;
 
     background: white;
@@ -238,6 +285,7 @@ input[type="date"] {
     margin-top: 10px;
 
     background: #e5e7e9;
+
     color: #222;
 }
 
@@ -247,6 +295,7 @@ input[type="date"] {
 
 button {
     border: none;
+
     border-radius: 9px;
 
     padding: 14px 20px;
@@ -262,6 +311,7 @@ button {
     margin-top: 12px;
 
     background: #17202a;
+
     color: white;
 
     font-weight: bold;
@@ -269,6 +319,7 @@ button {
 
 .agree-button:disabled {
     background: #aaa;
+
     cursor: not-allowed;
 }
 
@@ -280,6 +331,7 @@ button {
     display: none;
 
     background: #fadbd8;
+
     color: #922b21;
 
     padding: 13px;
@@ -305,18 +357,22 @@ button {
     width: 70px;
     height: 70px;
 
-    margin: 0 auto 15px;
+    margin:
+        0 auto 15px;
 
     border-radius: 50%;
 
     background: #1e8449;
+
     color: white;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     font-size: 38px;
+
     font-weight: bold;
 }
 
@@ -331,7 +387,8 @@ button {
 
     background: #f1f3f4;
 
-    border: 2px solid #17202a;
+    border:
+        2px solid #17202a;
 
     border-radius: 10px;
 
@@ -369,7 +426,8 @@ button {
 .info-row {
     display: flex;
 
-    border-bottom: 1px solid #eee;
+    border-bottom:
+        1px solid #eee;
 
     padding: 12px 0;
 
@@ -395,7 +453,8 @@ button {
 ========================= */
 
 .confirmed-rule {
-    border: 1px solid #d5d8dc;
+    border:
+        1px solid #d5d8dc;
 
     border-radius: 9px;
 
@@ -422,11 +481,13 @@ button {
 
 .signature-result {
     width: 100%;
+
     max-height: 230px;
 
     object-fit: contain;
 
-    border: 1px solid #ddd;
+    border:
+        1px solid #ddd;
 
     border-radius: 8px;
 
@@ -483,13 +544,14 @@ button {
 }
 
 /* =========================
-   小さい画面
+   スマホ
 ========================= */
 
 @media (max-width: 600px) {
 
     .container {
-        width: calc(100% - 12px);
+        width:
+            calc(100% - 12px);
 
         margin-top: 10px;
     }
@@ -516,6 +578,10 @@ button {
         width: auto;
 
         margin-bottom: 3px;
+    }
+
+    .important-notice {
+        font-size: 16px;
     }
 }
 
@@ -572,10 +638,16 @@ button {
     <div class="title">
         スマートフォン利用規約
     </div>
-    <span style="color: red;">本規約に同意いただけない場合スマートフォンを利用することができません。</span>
 
 
     <div class="preface">
+
+        <!-- ★ 赤色の重要事項 -->
+
+        <div class="important-notice">
+            本規約に同意いただけない場合、スマートフォンを利用することができません。
+        </div>
+
 
         本規約は、貸し主から貸与されたスマートフォンの
         利用に関し、利用者が遵守すべき事項を定めるものである。
@@ -583,6 +655,7 @@ button {
         うえで本スマートフォンを利用するものとする。
 
     </div>
+
 
     <div id="rules"></div>
 
@@ -596,6 +669,7 @@ button {
     <div class="title">
         利用者情報
     </div>
+
 
     <div class="field">
 
@@ -636,6 +710,7 @@ button {
         署名
     </div>
 
+
     <p>
         上記規約の内容を確認したことを示すため、
         下欄に手書きで署名してください。
@@ -644,7 +719,10 @@ button {
 
     <div class="signature-box">
 
-        <canvas id="signatureCanvas"></canvas>
+        <canvas
+            id="signatureCanvas">
+        </canvas>
+
 
         <div class="signature-hint">
             ここに署名してください
@@ -671,6 +749,7 @@ button {
     <div class="title">
         同意
     </div>
+
 
     <p>
         すべての条項を確認し、内容に同意する場合は
@@ -721,9 +800,11 @@ button {
             ✓
         </div>
 
+
         <h2>
             同意確認完了
         </h2>
+
 
         <p>
             以下の内容を確認してください。
@@ -731,8 +812,6 @@ button {
 
     </div>
 
-
-    <!-- 確認番号 -->
 
     <p style="text-align:center;">
         <strong>
@@ -755,7 +834,6 @@ button {
         保存してください。
 
     </div>
-
 
 </div>
 
@@ -821,6 +899,7 @@ button {
         同意した規約
     </div>
 
+
     <div id="resultRules"></div>
 
 </div>
@@ -833,6 +912,7 @@ button {
     <div class="title">
         署名
     </div>
+
 
     <img
         id="resultSignature"
@@ -849,6 +929,7 @@ button {
     <div class="title">
         利用開始
     </div>
+
 
     <p style="line-height:1.8;">
 
@@ -920,6 +1001,7 @@ const rules = [
             "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
     },
 
+
     {
         title:
             "利用範囲の制限",
@@ -927,6 +1009,7 @@ const rules = [
         text:
             "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
     },
+
 
     {
         title:
@@ -936,6 +1019,7 @@ const rules = [
             "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
     },
 
+
     {
         title:
             "禁止行為",
@@ -943,6 +1027,7 @@ const rules = [
         text:
             "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
     },
+
 
     {
         title:
@@ -952,6 +1037,7 @@ const rules = [
             "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
     },
 
+
     {
         title:
             "貸し出しの停止等",
@@ -959,6 +1045,7 @@ const rules = [
         text:
             "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
     },
+
 
     {
         title:
@@ -986,7 +1073,8 @@ rules.forEach(
             document.createElement("div");
 
 
-        div.className = "rule";
+        div.className =
+            "rule";
 
 
         div.innerHTML = `
@@ -997,6 +1085,7 @@ rules.forEach(
                     type="checkbox"
                     class="ruleCheck">
 
+
                 <span>
 
                     <span class="rule-title">
@@ -1006,7 +1095,9 @@ rules.forEach(
 
                     </span>
 
+
                     <br>
+
 
                     ${escapeHTML(rule.text)}
 
@@ -1032,11 +1123,13 @@ const canvas =
         "signatureCanvas"
     );
 
+
 const ctx =
     canvas.getContext("2d");
 
 
 let drawing = false;
+
 let signed = false;
 
 
@@ -1134,6 +1227,7 @@ function startDrawing(e) {
 
     ctx.beginPath();
 
+
     ctx.moveTo(
         p.x,
         p.y
@@ -1182,15 +1276,18 @@ canvas.addEventListener(
     startDrawing
 );
 
+
 canvas.addEventListener(
     "mousemove",
     draw
 );
 
+
 canvas.addEventListener(
     "mouseup",
     stopDrawing
 );
+
 
 canvas.addEventListener(
     "mouseleave",
@@ -1206,6 +1303,7 @@ canvas.addEventListener(
     }
 );
 
+
 canvas.addEventListener(
     "touchmove",
     draw,
@@ -1213,6 +1311,7 @@ canvas.addEventListener(
         passive:false
     }
 );
+
 
 canvas.addEventListener(
     "touchend",
@@ -1243,7 +1342,7 @@ function clearSignature() {
 
 
 /* =================================================
-   同意ボタン状態
+   同意ボタン
 ================================================= */
 
 const checkboxes =
@@ -1326,7 +1425,8 @@ function generateNumber() {
         "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
 
-    let result = "SP-";
+    let result =
+        "SP-";
 
 
     for (
@@ -1400,7 +1500,7 @@ function agree() {
         generateNumber();
 
 
-    /* 日時 */
+    /* 確認日時 */
 
     const now =
         new Date();
@@ -1420,7 +1520,7 @@ function agree() {
         );
 
 
-    /* 確認画面へデータを渡す */
+    /* 表示 */
 
     document
         .getElementById(
@@ -1474,7 +1574,8 @@ function agree() {
         );
 
 
-    resultRules.innerHTML = "";
+    resultRules.innerHTML =
+        "";
 
 
     rules.forEach(
@@ -1492,12 +1593,14 @@ function agree() {
 
             div.innerHTML = `
 
-                <div class="confirmed-rule-title">
+                <div
+                    class="confirmed-rule-title">
 
                     ✓ 第${index + 1}条　
                     ${escapeHTML(rule.title)}
 
                 </div>
+
 
                 <div>
 
@@ -1516,7 +1619,7 @@ function agree() {
     );
 
 
-    /* 入力画面を非表示 */
+    /* 入力画面を隠す */
 
     document
         .getElementById(
@@ -1536,7 +1639,7 @@ function agree() {
         .add("active");
 
 
-    /* ページ上部へ */
+    /* ページ上部 */
 
     window.scrollTo({
         top: 0,
@@ -1547,7 +1650,7 @@ function agree() {
 
 
 /* =================================================
-   修正する
+   内容を修正
 ================================================= */
 
 function backToInput() {
@@ -1577,14 +1680,10 @@ function backToInput() {
 
 
 /* =================================================
-   利用開始
+   利用開始 → Google
 ================================================= */
 
 function startUse() {
-
-    /*
-       利用開始ボタンを押したらGoogleへ移動
-    */
 
     window.location.href =
         "https://www.google.com/";
@@ -1593,7 +1692,7 @@ function startUse() {
 
 
 /* =================================================
-   生年月日表示
+   生年月日
 ================================================= */
 
 function formatBirth(value) {
@@ -1688,22 +1787,26 @@ async function toggleFullscreen() {
 
     try {
 
-        if (!document.fullscreenElement) {
+        if (
+            !document.fullscreenElement
+        ) {
 
-            await document.documentElement.requestFullscreen();
+            await
+            document
+            .documentElement
+            .requestFullscreen();
 
         } else {
 
-            await document.exitFullscreen();
+            await
+            document
+            .exitFullscreen();
 
         }
 
-    } catch (error) {
+    }
 
-        /*
-           iPhone/iPadなど、ブラウザ側で
-           全画面APIが制限されている場合がある。
-        */
+    catch (error) {
 
         alert(
             "このブラウザでは全画面表示が利用できません。"
