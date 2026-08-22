@@ -34,13 +34,19 @@ body {
         sans-serif;
 }
 
+/* =========================
+   ヘッダー
+========================= */
+
 .header {
     background: #17202a;
     color: white;
+
     padding:
         calc(18px + env(safe-area-inset-top))
         18px
         18px;
+
     text-align: center;
 }
 
@@ -54,6 +60,10 @@ body {
     font-size: 13px;
     opacity: .8;
 }
+
+/* =========================
+   全画面ボタン
+========================= */
 
 .fullscreen-button {
     position: fixed;
@@ -77,6 +87,10 @@ body {
     box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
+/* =========================
+   画面
+========================= */
+
 .screen {
     display: none;
     min-height: calc(100vh - 100px);
@@ -90,6 +104,10 @@ body {
     width: min(850px, calc(100% - 20px));
     margin: 20px auto 50px;
 }
+
+/* =========================
+   カード
+========================= */
 
 .card {
     background: white;
@@ -115,9 +133,19 @@ body {
     margin-bottom: 20px;
 }
 
-/* ★ 赤字・太字の重要事項 */
+/* =========================
+   重要事項
+========================= */
 
 .important-notice {
+    color: red;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+.expiry-notice {
     color: red;
     font-weight: bold;
     font-size: 17px;
@@ -125,11 +153,17 @@ body {
     margin-bottom: 16px;
 }
 
+/* =========================
+   規約
+========================= */
+
 .rule {
     border: 1px solid #d5d8dc;
     border-radius: 10px;
+
     padding: 15px;
     margin: 12px 0;
+
     background: #fafafa;
 }
 
@@ -137,6 +171,7 @@ body {
     display: flex;
     gap: 12px;
     align-items: flex-start;
+
     line-height: 1.7;
     cursor: pointer;
 }
@@ -144,6 +179,7 @@ body {
 .rule input {
     width: 22px;
     height: 22px;
+
     flex-shrink: 0;
     margin-top: 3px;
 }
@@ -152,12 +188,17 @@ body {
     font-weight: bold;
 }
 
+/* =========================
+   入力欄
+========================= */
+
 .field {
     margin: 20px 0;
 }
 
 .field label {
     display: block;
+
     font-weight: bold;
     margin-bottom: 7px;
 }
@@ -165,18 +206,31 @@ body {
 input[type="text"],
 input[type="date"] {
     width: 100%;
+
     padding: 14px;
 
     border: 1px solid #aaa;
     border-radius: 8px;
 
     background: white;
+
     font-size: 16px;
 }
 
+/* =========================
+   署名
+========================= */
+
 .signature-box {
     width: 100%;
-    height: 230px;
+
+    /*
+      画面幅に応じて高さも自動調整
+      小さいスマホ：160px前後
+      タブレット：画面幅に応じて拡大
+      PC：最大300px
+    */
+    height: clamp(160px, 42vw, 300px);
 
     position: relative;
 
@@ -186,13 +240,22 @@ input[type="date"] {
     background: white;
 
     overflow: hidden;
+
     touch-action: none;
 }
 
 #signatureCanvas {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
     width: 100%;
     height: 100%;
+
     display: block;
+
+    touch-action: none;
 }
 
 .signature-hint {
@@ -202,6 +265,7 @@ input[type="date"] {
     bottom: 10px;
 
     color: #aaa;
+
     font-size: 13px;
 
     pointer-events: none;
@@ -209,22 +273,30 @@ input[type="date"] {
 
 .clear-button {
     margin-top: 10px;
+
     background: #e5e7e9;
     color: #222;
 }
 
+/* =========================
+   ボタン
+========================= */
+
 button {
     border: none;
+
     border-radius: 9px;
 
     padding: 14px 20px;
 
     font-size: 16px;
+
     cursor: pointer;
 }
 
 .agree-button {
     width: 100%;
+
     margin-top: 12px;
 
     background: #17202a;
@@ -253,6 +325,10 @@ button {
     line-height: 1.6;
 }
 
+/* =========================
+   確認画面
+========================= */
+
 .confirmation-header {
     text-align: center;
     padding: 10px 0 20px;
@@ -270,6 +346,7 @@ button {
     color: white;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -318,6 +395,10 @@ button {
     font-size: 14px;
 }
 
+/* =========================
+   確認情報
+========================= */
+
 .info-row {
     display: flex;
 
@@ -330,14 +411,30 @@ button {
 
 .info-label {
     width: 120px;
+
     flex-shrink: 0;
+
     font-weight: bold;
 }
 
 .info-value {
     flex: 1;
+
     word-break: break-word;
 }
+
+/* =========================
+   有効期限表示
+========================= */
+
+.expiry-result {
+    color: red !important;
+    font-weight: bold;
+}
+
+/* =========================
+   確認済み規約
+========================= */
 
 .confirmed-rule {
     border: 1px solid #d5d8dc;
@@ -361,9 +458,14 @@ button {
     margin-bottom: 5px;
 }
 
+/* =========================
+   署名表示
+========================= */
+
 .signature-result {
     width: 100%;
-    max-height: 230px;
+
+    max-height: 300px;
 
     object-fit: contain;
 
@@ -373,6 +475,10 @@ button {
 
     background: white;
 }
+
+/* =========================
+   利用開始
+========================= */
 
 .start-button {
     width: 100%;
@@ -392,9 +498,15 @@ button {
 
 .back-button {
     width: 100%;
+
     margin-top: 10px;
+
     background: #e5e7e9;
 }
+
+/* =========================
+   フッター
+========================= */
 
 .footer {
     text-align: center;
@@ -408,6 +520,10 @@ button {
         15px
         calc(25px + env(safe-area-inset-bottom));
 }
+
+/* =========================
+   スマホ
+========================= */
 
 @media (max-width: 600px) {
 
@@ -438,10 +554,15 @@ button {
         margin-bottom: 3px;
     }
 
-    .important-notice {
+    .important-notice,
+    .expiry-notice {
         font-size: 16px;
     }
 }
+
+/* =========================
+   全画面
+========================= */
 
 :fullscreen {
     background: #eef0f3;
@@ -453,7 +574,13 @@ button {
 </style>
 </head>
 
+
 <body>
+
+
+<!-- ======================================
+     ヘッダー
+====================================== -->
 
 <header class="header">
 
@@ -468,14 +595,16 @@ button {
 </header>
 
 
-<!-- ================================
+<!-- ======================================
      入力画面
-================================ -->
+====================================== -->
 
 <div id="inputScreen" class="screen active">
 
 <div class="container">
 
+
+<!-- 規約 -->
 
 <div class="card">
 
@@ -490,6 +619,14 @@ button {
             本規約に同意いただけない場合、スマートフォンを利用することができません。
         </div>
 
+        <!-- 有効期限は同意後に自動表示 -->
+        <div
+            id="inputExpiryNotice"
+            class="expiry-notice"
+            style="display:none;">
+        </div>
+
+
         本規約は、貸し主から貸与されたスマートフォンの
         利用に関し、利用者が遵守すべき事項を定めるものである。
         利用者は、以下の各条項を確認し、その内容に同意した
@@ -502,6 +639,8 @@ button {
 
 </div>
 
+
+<!-- 利用者情報 -->
 
 <div class="card">
 
@@ -541,6 +680,8 @@ button {
 </div>
 
 
+<!-- 署名 -->
+
 <div class="card">
 
     <div class="title">
@@ -576,6 +717,8 @@ button {
 </div>
 
 
+<!-- 同意 -->
+
 <div class="card">
 
     <div class="title">
@@ -609,9 +752,9 @@ button {
 </div>
 
 
-<!-- ================================
+<!-- ======================================
      確認画面
-================================ -->
+====================================== -->
 
 <div id="confirmationScreen" class="screen">
 
@@ -626,9 +769,11 @@ button {
             ✓
         </div>
 
+
         <h2>
             同意確認完了
         </h2>
+
 
         <p>
             以下の内容を確認してください。
@@ -661,6 +806,8 @@ button {
 
 </div>
 
+
+<!-- 利用者情報 -->
 
 <div class="card">
 
@@ -697,6 +844,40 @@ button {
     </div>
 
 
+    <!-- 同意日 -->
+
+    <div class="info-row">
+
+        <div class="info-label">
+            同意日
+        </div>
+
+        <div
+            id="resultAgreementDate"
+            class="info-value">
+        </div>
+
+    </div>
+
+
+    <!-- 有効期限 -->
+
+    <div class="info-row">
+
+        <div class="info-label">
+            有効期限
+        </div>
+
+        <div
+            id="resultExpiryDate"
+            class="info-value expiry-result">
+        </div>
+
+    </div>
+
+
+    <!-- 確認日時 -->
+
     <div class="info-row">
 
         <div class="info-label">
@@ -713,22 +894,28 @@ button {
 </div>
 
 
+<!-- 規約 -->
+
 <div class="card">
 
     <div class="title">
         同意した規約
     </div>
 
+
     <div id="resultRules"></div>
 
 </div>
 
+
+<!-- 署名 -->
 
 <div class="card">
 
     <div class="title">
         署名
     </div>
+
 
     <img
         id="resultSignature"
@@ -737,6 +924,8 @@ button {
 
 </div>
 
+
+<!-- 利用開始 -->
 
 <div class="card">
 
@@ -778,6 +967,8 @@ button {
 </div>
 
 
+<!-- 全画面ボタン -->
+
 <button
     class="fullscreen-button"
     onclick="toggleFullscreen()"
@@ -789,15 +980,17 @@ button {
 
 
 <footer class="footer">
+
     スマートフォン利用規約
+
 </footer>
 
 
 <script>
 
-/* ================================
+/* ==========================================
    規約
-================================ */
+========================================== */
 
 const rules = [
 
@@ -809,6 +1002,7 @@ const rules = [
             "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
     },
 
+
     {
         title:
             "利用範囲の制限",
@@ -816,6 +1010,7 @@ const rules = [
         text:
             "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
     },
+
 
     {
         title:
@@ -825,6 +1020,7 @@ const rules = [
             "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
     },
 
+
     {
         title:
             "禁止行為",
@@ -832,6 +1028,7 @@ const rules = [
         text:
             "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
     },
+
 
     {
         title:
@@ -841,6 +1038,7 @@ const rules = [
             "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
     },
 
+
     {
         title:
             "貸し出しの停止等",
@@ -848,6 +1046,7 @@ const rules = [
         text:
             "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
     },
+
 
     {
         title:
@@ -860,9 +1059,9 @@ const rules = [
 ];
 
 
-/* ================================
+/* ==========================================
    規約表示
-================================ */
+========================================== */
 
 const rulesArea =
     document.getElementById("rules");
@@ -874,7 +1073,10 @@ rules.forEach(
         const div =
             document.createElement("div");
 
-        div.className = "rule";
+
+        div.className =
+            "rule";
+
 
         div.innerHTML = `
 
@@ -903,15 +1105,16 @@ rules.forEach(
 
         `;
 
+
         rulesArea.appendChild(div);
 
     }
 );
 
 
-/* ================================
-   署名
-================================ */
+/* ==========================================
+   署名キャンバス
+========================================== */
 
 const canvas =
     document.getElementById(
@@ -925,19 +1128,57 @@ let drawing = false;
 let signed = false;
 
 
-function setupCanvas() {
+/*
+  Canvasの実際の解像度を画面サイズに合わせる
+*/
+
+function resizeCanvas() {
 
     const rect =
         canvas.getBoundingClientRect();
 
+
     const ratio =
-        window.devicePixelRatio || 1;
+        Math.max(
+            window.devicePixelRatio || 1,
+            1
+        );
+
+
+    /*
+      既存の署名を一時保存
+    */
+
+    let oldImage = null;
+
+    if (
+        canvas.width > 0 &&
+        canvas.height > 0
+    ) {
+
+        try {
+
+            oldImage =
+                canvas.toDataURL(
+                    "image/png"
+                );
+
+        } catch (e) {}
+
+    }
+
 
     canvas.width =
-        rect.width * ratio;
+        Math.round(
+            rect.width * ratio
+        );
+
 
     canvas.height =
-        rect.height * ratio;
+        Math.round(
+            rect.height * ratio
+        );
+
 
     ctx.setTransform(
         ratio,
@@ -948,14 +1189,51 @@ function setupCanvas() {
         0
     );
 
+
     ctx.lineWidth = 2.2;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
+
+    /*
+      画面回転などでサイズが変わった場合、
+      以前の署名を戻す
+    */
+
+    if (oldImage && signed) {
+
+        const image =
+            new Image();
+
+
+        image.onload = function() {
+
+            ctx.drawImage(
+                image,
+                0,
+                0,
+                rect.width,
+                rect.height
+            );
+
+        };
+
+
+        image.src =
+            oldImage;
+
+    }
+
 }
 
 
-setupCanvas();
+resizeCanvas();
+
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
 
 
 function getPosition(e) {
@@ -963,9 +1241,11 @@ function getPosition(e) {
     const rect =
         canvas.getBoundingClientRect();
 
+
     if (e.touches) {
 
         return {
+
             x:
                 e.touches[0].clientX -
                 rect.left,
@@ -973,11 +1253,14 @@ function getPosition(e) {
             y:
                 e.touches[0].clientY -
                 rect.top
+
         };
 
     }
 
+
     return {
+
         x:
             e.clientX -
             rect.left,
@@ -985,6 +1268,7 @@ function getPosition(e) {
         y:
             e.clientY -
             rect.top
+
     };
 
 }
@@ -997,15 +1281,19 @@ function startDrawing(e) {
     drawing = true;
     signed = true;
 
+
     const p =
         getPosition(e);
 
+
     ctx.beginPath();
+
 
     ctx.moveTo(
         p.x,
         p.y
     );
+
 
     updateButton();
 
@@ -1016,15 +1304,19 @@ function draw(e) {
 
     if (!drawing) return;
 
+
     e.preventDefault();
+
 
     const p =
         getPosition(e);
+
 
     ctx.lineTo(
         p.x,
         p.y
     );
+
 
     ctx.stroke();
 
@@ -1064,7 +1356,7 @@ canvas.addEventListener(
     "touchstart",
     startDrawing,
     {
-        passive:false
+        passive: false
     }
 );
 
@@ -1072,7 +1364,7 @@ canvas.addEventListener(
     "touchmove",
     draw,
     {
-        passive:false
+        passive: false
     }
 );
 
@@ -1082,9 +1374,9 @@ canvas.addEventListener(
 );
 
 
-/* ================================
+/* ==========================================
    署名消去
-================================ */
+========================================== */
 
 function clearSignature() {
 
@@ -1095,16 +1387,18 @@ function clearSignature() {
         canvas.height
     );
 
+
     signed = false;
+
 
     updateButton();
 
 }
 
 
-/* ================================
+/* ==========================================
    同意ボタン
-================================ */
+========================================== */
 
 const checkboxes =
     document.querySelectorAll(
@@ -1149,16 +1443,19 @@ function updateButton() {
                 checkbox.checked
         );
 
+
     const name =
         document
         .getElementById("name")
         .value
         .trim();
 
+
     const birth =
         document
         .getElementById("birth")
         .value;
+
 
     document
         .getElementById("agreeButton")
@@ -1173,16 +1470,83 @@ function updateButton() {
 }
 
 
-/* ================================
+/* ==========================================
+   日付関連
+========================================== */
+
+
+/*
+  Date型の日付を
+  「YYYY年M月D日」にする
+*/
+
+function formatDateJP(date) {
+
+    return date.getFullYear()
+        + "年"
+        + (date.getMonth() + 1)
+        + "月"
+        + date.getDate()
+        + "日";
+
+}
+
+
+/*
+  同意日から1か月後を計算
+*/
+
+function addOneMonth(date) {
+
+    const result =
+        new Date(date);
+
+
+    const originalDay =
+        result.getDate();
+
+
+    /*
+      翌月へ移動
+    */
+
+    result.setMonth(
+        result.getMonth() + 1
+    );
+
+
+    /*
+      例えば1月31日→2月31日は存在しないため、
+      翌月の末日に調整する
+    */
+
+    if (
+        result.getDate() !== originalDay
+    ) {
+
+        result.setDate(0);
+
+    }
+
+
+    return result;
+
+}
+
+
+/* ==========================================
    確認番号
-================================ */
+========================================== */
 
 function generateNumber() {
 
     const chars =
         "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
-    let result = "SP-";
+
+    let result =
+        "SP-";
+
 
     for (
         let i = 0;
@@ -1200,14 +1564,15 @@ function generateNumber() {
 
     }
 
+
     return result;
 
 }
 
 
-/* ================================
+/* ==========================================
    同意
-================================ */
+========================================== */
 
 function agree() {
 
@@ -1217,10 +1582,12 @@ function agree() {
         .value
         .trim();
 
+
     const birth =
         document
         .getElementById("birth")
         .value;
+
 
     const allChecked =
         [...checkboxes]
@@ -1246,27 +1613,85 @@ function agree() {
     }
 
 
+    /*
+      同意日時
+    */
+
+    const agreementDateTime =
+        new Date();
+
+
+    /*
+      同意日
+    */
+
+    const agreementDate =
+        new Date(
+            agreementDateTime.getFullYear(),
+            agreementDateTime.getMonth(),
+            agreementDateTime.getDate()
+        );
+
+
+    /*
+      有効期限
+      同意日から1か月
+    */
+
+    const expiryDate =
+        addOneMonth(
+            agreementDate
+        );
+
+
+    /*
+      確認番号
+    */
+
     const number =
         generateNumber();
 
 
-    const now =
-        new Date();
+    /*
+      確認日時
+    */
 
-
-    const date =
-        now.toLocaleString(
+    const confirmationDate =
+        agreementDateTime.toLocaleString(
             "ja-JP",
             {
-                year:"numeric",
-                month:"long",
-                day:"numeric",
-                hour:"2-digit",
-                minute:"2-digit",
-                second:"2-digit"
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
             }
         );
 
+
+    /*
+      冒頭の有効期限表示
+    */
+
+    const inputExpiryNotice =
+        document.getElementById(
+            "inputExpiryNotice"
+        );
+
+
+    inputExpiryNotice.textContent =
+        "本規約の有効期限："
+        + formatDateJP(expiryDate);
+
+
+    inputExpiryNotice.style.display =
+        "block";
+
+
+    /*
+      確認画面
+    */
 
     document
         .getElementById(
@@ -1294,11 +1719,35 @@ function agree() {
 
     document
         .getElementById(
+            "resultAgreementDate"
+        )
+        .textContent =
+        formatDateJP(
+            agreementDate
+        );
+
+
+    document
+        .getElementById(
+            "resultExpiryDate"
+        )
+        .textContent =
+        formatDateJP(
+            expiryDate
+        );
+
+
+    document
+        .getElementById(
             "resultDate"
         )
         .textContent =
-        date;
+        confirmationDate;
 
+
+    /*
+      署名
+    */
 
     document
         .getElementById(
@@ -1310,13 +1759,18 @@ function agree() {
         );
 
 
+    /*
+      規約
+    */
+
     const resultRules =
         document.getElementById(
             "resultRules"
         );
 
 
-    resultRules.innerHTML = "";
+    resultRules.innerHTML =
+        "";
 
 
     rules.forEach(
@@ -1359,6 +1813,10 @@ function agree() {
     );
 
 
+    /*
+      入力画面を非表示
+    */
+
     document
         .getElementById(
             "inputScreen"
@@ -1366,6 +1824,10 @@ function agree() {
         .classList
         .remove("active");
 
+
+    /*
+      確認画面を表示
+    */
 
     document
         .getElementById(
@@ -1383,9 +1845,9 @@ function agree() {
 }
 
 
-/* ================================
+/* ==========================================
    内容を修正
-================================ */
+========================================== */
 
 function backToInput() {
 
@@ -1413,9 +1875,9 @@ function backToInput() {
 }
 
 
-/* ================================
+/* ==========================================
    利用開始 → Google
-================================ */
+========================================== */
 
 function startUse() {
 
@@ -1425,9 +1887,9 @@ function startUse() {
 }
 
 
-/* ================================
-   生年月日
-================================ */
+/* ==========================================
+   生年月日表示
+========================================== */
 
 function formatBirth(value) {
 
@@ -1440,18 +1902,18 @@ function formatBirth(value) {
     return date.toLocaleDateString(
         "ja-JP",
         {
-            year:"numeric",
-            month:"long",
-            day:"numeric"
+            year: "numeric",
+            month: "long",
+            day: "numeric"
         }
     );
 
 }
 
 
-/* ================================
+/* ==========================================
    エラー
-================================ */
+========================================== */
 
 function showError(text) {
 
@@ -1470,16 +1932,16 @@ function showError(text) {
 
 
     error.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
+        behavior: "smooth",
+        block: "center"
     });
 
 }
 
 
-/* ================================
+/* ==========================================
    HTMLエスケープ
-================================ */
+========================================== */
 
 function escapeHTML(value) {
 
@@ -1513,9 +1975,9 @@ function escapeHTML(value) {
 }
 
 
-/* ================================
+/* ==========================================
    全画面表示
-================================ */
+========================================== */
 
 async function toggleFullscreen() {
 
